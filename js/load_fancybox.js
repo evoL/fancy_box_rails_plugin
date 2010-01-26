@@ -15,12 +15,12 @@
 // itemLoadCallback : Custom function to get group items 
 //                   (see example on source of : http://fancy.klade.lv/)
 
-$(document).ready(function() {
-  $("a.fancy-img").fancybox();
-  $(".gallery a").fancybox();
-  $("a.fancy").fancybox();
-  $("a.iframe").fancybox({
-    'frameWidth': 800,
-    'frameHeight': 600
-  });
+document.observe('dom:loaded', function() {
+	new Fancybox($$('a.fancy-img'));
+	new Fancybox($$('.gallery a'));
+	new Fancybox($$('a.fancy'));
+	new Fancybox($$('a.iframe'), {
+		'frameWidth': 800,
+		'frameHeight': 600
+	});
 });
