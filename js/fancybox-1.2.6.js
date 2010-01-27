@@ -466,7 +466,7 @@ var Fancybox = Class.create({
 			
 			$('fancy_title').setStyle({
 				top: (pos.top + $('fancy_outer').getOuterHeight() - 96) + 'px',
-				left: (pos.left + (($('fancy_outer').getOuterWidth() * 0.5) - ($('fancy_title').getWidth() * 0.5))) + 'px'
+				left: (pos.left + (($('fancy_outer').getOuterWidth() * 0.5) - ($('fancy_title').getWidth() * 0.5)) - 21) + 'px'
 			}).showBlock();
 		}
 		

@@ -23,4 +23,8 @@ document.observe('dom:loaded', function() {
 		'frameWidth': 800,
 		'frameHeight': 600
 	});
+	new Fancybox($$('a.youtube'), {
+		frameWidth: 425,
+		frameHeight: 344
+	});
 });
