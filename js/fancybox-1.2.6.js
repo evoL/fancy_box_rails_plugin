@@ -462,7 +462,7 @@ var Fancybox = Class.create({
 		if (typeof this.opts.itemArray[this.opts.itemCurrent].title !== 'undefined' && this.opts.itemArray[this.opts.itemCurrent].title.length > 0) {
 			var pos = $('fancy_outer').positionedOffset();
 			
-			$$('#fancy_title div').each(function(x) { x.innerText = dis.opts.itemArray[dis.opts.itemCurrent].title; });
+			$$('#fancy_title div')[0].update(this.opts.itemArray[this.opts.itemCurrent].title);
 			
 			$('fancy_title').setStyle({
 				top: (pos.top + $('fancy_outer').getOuterHeight() - 96) + 'px',

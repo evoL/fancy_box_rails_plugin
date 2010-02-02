@@ -25,6 +25,8 @@ document.observe('dom:loaded', function() {
 	});
 	new Fancybox($$('a.youtube'), {
 		frameWidth: 425,
-		frameHeight: 344
+		frameHeight: 344,
+		overlayColor: '#000',
+		hideOnContentClick: false
 	});
 });
