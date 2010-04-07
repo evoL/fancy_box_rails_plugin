@@ -194,8 +194,8 @@ var Fancybox = Class.create({
 			}).showBlock();
 		}
 		
-		document.observe('resize', this.scrollBox);
-		document.observe('scroll', this.scrollBox);
+		document.observe('resize', this.scrollBox.bind(this));
+		document.observe('scroll', this.scrollBox.bind(this));
 		
 		this._change_item(elem);
 	},
@@ -220,10 +220,11 @@ var Fancybox = Class.create({
 				this._proceed_image();
 			} else {
 				this.showLoading();
+				var dis = this;
 				this.imagePreloader.onload = function() {
 					$('fancy_loading').hide();
 					
-					this._proceed_image();
+					dis._proceed_image();
 				};
 			}
 		} else {
